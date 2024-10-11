@@ -11,7 +11,7 @@ const config: Config = {
   url: 'https://snburman.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/fncmp',
+  baseUrl: '/',
   deploymentBranch: 'gh-pages',
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -34,10 +34,11 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/docs',
           sidebarPath: './sidebars.ts',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          // customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
@@ -53,7 +54,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'fncmpSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'FnCmp',
         },
         {
           to: '/github',
