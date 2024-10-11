@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[583],{6866:(e,s,c)=>{c.r(s),c.d(s,{default:()=>u});var n=c(781),r=c(4848);function u(){return(0,r.jsx)(n.A,{children:(0,r.jsx)("h1",{children:"Home Page"})})}}}]);
