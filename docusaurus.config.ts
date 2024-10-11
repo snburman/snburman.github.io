@@ -55,11 +55,11 @@ const config: Config = {
           position: 'left',
           label: 'FnCmp',
         },
-        {
-          to: '/github',
-          position: 'left',
-          label: 'Github',
-        },
+        // {
+        //   to: '/github',
+        //   position: 'left',
+        //   label: 'Github',
+        // },
         // {
         //   type: 'docSidebar',
         //   sidebarId: 'mnemoSidebar',
