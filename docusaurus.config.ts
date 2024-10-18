@@ -5,7 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'FnCmp Docs',
   tagline: '',
-  favicon: 'img/favicon.ico',
+  favicon: 'favicon.ico',
+  staticDirectories: ['public'],
 
   // Set the production url of your site here
   url: 'https://snburman.github.io',
