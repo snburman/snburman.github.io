@@ -11,7 +11,7 @@ This section will cover how rendering is achieved and how we'll use FnComponent'
 ```go title="fncmp.HandleFn function signature"
 type HandleFn func(context.Context) fncmp.FnComponent
 ```
-[fncmp.HandleFn](https://pkg.go.dev/github.com/kitkitchen/fncmp#HandleFn) accepts a context.Context and returns a FnComponent.
+[fncmp.HandleFn](https://pkg.go.dev/github.com/snburman/fncmp#HandleFn) accepts a context.Context and returns a FnComponent.
 :::warning
 Always pass the context received by a HandleFn to fncmp.NewFn as it contains information needed by the client.
 :::
@@ -21,7 +21,7 @@ Always pass the context received by a HandleFn to fncmp.NewFn as it contains inf
 ```go title="fncmp.NewFn function signature"
 func fncmp.NewFn(context.Context, fncmp.Component) fncmp.FnComponent
 ```
-[fncmp.FnComponent](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent) is instantiated with a context.Context and a [fncmp.Component](https://pkg.go.dev/github.com/kitkitchen/fncmp#Component). 
+[fncmp.FnComponent](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent) is instantiated with a context.Context and a [fncmp.Component](https://pkg.go.dev/github.com/snburman/fncmp#Component). 
 The context passed to NewFn should be the same context passed to the HandleFn.
 
 Values may be stored and retrieved from the context as it's passed down to the FnComponent's children. 
@@ -67,26 +67,26 @@ fncmp.NewFn(ctx, greeting).SwapTagInner("main")
 <TabItem value={0} label="Tag">
 Parameter: <b>tag</b> <i>string</i>
     <ul style={{justifyContent: 'flex-end'}}>
-        <li>[SwapTagInner](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.SwapTagInner) (default)</li>
+        <li>[SwapTagInner](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.SwapTagInner) (default)</li>
         Swaps the inner HTML of a tag (eg. main) with the HTML rendered by the FnComponent
-        <li>[SwapTagOuter](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.SwapTagOuter)</li>
+        <li>[SwapTagOuter](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.SwapTagOuter)</li>
         Swaps the outer HTML of a tag with the HTML rendered by the FnComponent
-        <li>[PrependTag](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.PrependTag)</li>
+        <li>[PrependTag](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.PrependTag)</li>
         Prepends the HTML of a tag with the HTML rendered by the FnComponent
-        <li>[AppendTag](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.AppendTag)</li>
+        <li>[AppendTag](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.AppendTag)</li>
         Appends the HTML of a tag with the HTML rendered by the FnComponent
     </ul>
 </TabItem>
 <TabItem value={1} label="Element">
 Parameter: <b>id</b> <i>string</i>
     <ul style={{justifyContent: 'flex-start'}}>
-        <li>[SwapElementInner](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.SwapElementInner)</li>
+        <li>[SwapElementInner](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.SwapElementInner)</li>
         Swaps the inner HTML of an element by ID with the HTML rendered by the FnComponent
-        <li>[SwapElementOuter](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.SwapElementOuter)</li>
+        <li>[SwapElementOuter](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.SwapElementOuter)</li>
         Swaps the outer HTML of an element by ID with the HTML rendered by the FnComponent
-        <li>[PrependElement](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.PrependElement)</li>
+        <li>[PrependElement](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.PrependElement)</li>
         Prepends the HTML of an element by ID with the HTML rendered by the FnComponent
-        <li>[AppendElement](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.AppendElement)</li>
+        <li>[AppendElement](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.AppendElement)</li>
         Appends the HTML of an element by ID with the HTML rendered by the FnComponent
     </ul>
 </TabItem>

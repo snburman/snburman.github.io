@@ -2,11 +2,11 @@
 sidebar_position: 7
 title: "Context"
 ---
-The context passed to a HandleFn contains a [Dispatch](https://pkg.go.dev/github.com/kitkitchen/fncmp#Dispatch) struct
+The context passed to a HandleFn contains a [Dispatch](https://pkg.go.dev/github.com/snburman/fncmp#Dispatch) struct
 that contains information needed by the client, initiated by <code>fncmp.min.js</code>, to communicate with the server.
 While the context must remain consistent during a request, values may be stored and retrieved from the context as needed.
 
-One such example is an event triggered by an [EventListener](https://pkg.go.dev/github.com/kitkitchen/fncmp#EventListener).
+One such example is an event triggered by an [EventListener](https://pkg.go.dev/github.com/snburman/fncmp#EventListener).
 
 ### Events
 We can see that the EventListener struct contains a context and a HandleFn. The HandleFn being the function that was [passed to
@@ -64,7 +64,7 @@ type Task struct {
 }
 ```
 
-Now, with a new <i>handleSubmit</i> function, we can use the [fncmp.EventData](https://pkg.go.dev/github.com/kitkitchen/fncmp#EventData) 
+Now, with a new <i>handleSubmit</i> function, we can use the [fncmp.EventData](https://pkg.go.dev/github.com/snburman/fncmp#EventData) 
 function to parse the data from the context, passing the type of data (Task) as a generic argument.
 ```go {2,4} title="main.go"
 func handleSubmit(ctx context.Context) fncmp.FnComponent {
@@ -75,12 +75,12 @@ func handleSubmit(ctx context.Context) fncmp.FnComponent {
     //...
 }
 ```
-Notice that, in the event that the context doesn't contain the expected Task data, we can return a [fncmp.FnErr](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnErr), much like a FnComponent with an error in place of a Component.
+Notice that, in the event that the context doesn't contain the expected Task data, we can return a [fncmp.FnErr](https://pkg.go.dev/github.com/snburman/fncmp#FnErr), much like a FnComponent with an error in place of a Component.
 This effectively cancels the Dispatch to the client and no subsequent rendering takes place.
 :::info
 OnSubmit is the only event that should always have a user defined type passed to EventData as OnSubmit returns arbitrary form data.
-Other events, such as [OnMouseEnter](https://pkg.go.dev/github.com/kitkitchen/fncmp#OnEvent), can be parsed using
-[fncmp.MouseEvent](https://pkg.go.dev/github.com/kitkitchen/fncmp#MouseEvent) to retrieve values like the mouse's position.
+Other events, such as [OnMouseEnter](https://pkg.go.dev/github.com/snburman/fncmp#OnEvent), can be parsed using
+[fncmp.MouseEvent](https://pkg.go.dev/github.com/snburman/fncmp#MouseEvent) to retrieve values like the mouse's position.
 :::
 
 Now that we have the task, we can add it to the list of tasks.
@@ -136,4 +136,4 @@ Output:
 <img src={add_task_img} />
 
 This to-do list isn't very useful yet, but it demonstrates how to use the context to retrieve data from an EventListener.\
-In the next section, we'll use [Cache](https://pkg.go.dev/github.com/kitkitchen/fncmp#Cache) to keep track of tasks and their completion status.
+In the next section, we'll use [Cache](https://pkg.go.dev/github.com/snburman/fncmp#Cache) to keep track of tasks and their completion status.

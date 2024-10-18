@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/kitkitchen/fncmp"
+	"github.com/snburman/fncmp"
 )
 
 func init() {

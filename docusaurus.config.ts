@@ -37,7 +37,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
         },
         theme: {
-          // customCss: './src/css/custom.css',
+          customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
@@ -55,22 +55,11 @@ const config: Config = {
           position: 'left',
           label: 'FnCmp',
         },
-        // {
-        //   to: '/github',
-        //   position: 'left',
-        //   label: 'Github',
-        // },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'mnemoSidebar',
-        //   position: 'left',
-        //   label: 'mnemo',
-        // },
-        // {
-        //   href: 'https://github.com/kitkitchen',
-        //   label: 'GitHub',
-        //   position: 'left',
-        // },
+        {
+          href: 'https://github.com/snburman',
+          label: 'GitHub',
+          position: 'right',
+        },
       ],
     },
     footer: {

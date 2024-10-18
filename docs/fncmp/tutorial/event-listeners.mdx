@@ -4,14 +4,14 @@ title: "Event listeners"
 ---
 import button_result from '../img/server_button_result.png'
 
-A [fncmp.HandleFn](https://pkg.go.dev/github.com/kitkitchen/fncmp#HandleFn) can also be used as a callback function for an event listener.
+A [fncmp.HandleFn](https://pkg.go.dev/github.com/snburman/fncmp#HandleFn) can also be used as a callback function for an event listener.
 ```go title="main.go"
 func handleClick(ctx context.Context) fncmp.FnComponent {
 	///
 }
 ```
 
-FnComponent's [WithEvents](https://pkg.go.dev/github.com/kitkitchen/fncmp#FnComponent.WithEvents) method is used to add event listeners to the component.
+FnComponent's [WithEvents](https://pkg.go.dev/github.com/snburman/fncmp#FnComponent.WithEvents) method is used to add event listeners to the component.
 ```go {3-4} title="main.go"
 func HandleMainFn(ctx context.Context) fncmp.FnComponent {
     button := fncmp.HTML("<button>Click me</button>")
@@ -22,7 +22,7 @@ func HandleMainFn(ctx context.Context) fncmp.FnComponent {
 Now, when the button is clicked, the handleClick function will be called.
 
 :::tip
-fncmp supplies a set of [OnEvent](https://pkg.go.dev/github.com/kitkitchen/fncmp#OnEvent) constants (such as fncmp.OnClick)
+fncmp supplies a set of [OnEvent](https://pkg.go.dev/github.com/snburman/fncmp#OnEvent) constants (such as fncmp.OnClick)
 to be used with the WithEvents method.
 :::
 
