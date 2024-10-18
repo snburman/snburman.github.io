@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[596],{1114:e=>{e.exports=JSON.parse('{"title":"Reference","slug":"/category/reference","permalink":"/docs/category/reference","navigation":{"previous":{"title":"Cache","permalink":"/docs/fncmp/tutorial/cache"},"next":{"title":"pkg.go.dev","permalink":"/docs/fncmp/reference/intro"}}}')}}]);
