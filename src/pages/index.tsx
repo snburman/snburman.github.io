@@ -8,13 +8,13 @@ import {
     Typography,
 } from "@mui/material";
 import { MAX_DEVICE_WIDTH } from "@site/contants";
-import { useWindow } from "@site/hooks";
+import { useWindowSize } from "@site/hooks";
 import { theme } from "@site/theme";
 import { StyleSheet } from "@site/types";
 import Layout from "@theme/Layout";
 
 export default function Index() {
-    const width = useWindow();
+    const { width } = useWindowSize();
     return (
         <ThemeProvider theme={theme}>
             <Layout>
@@ -22,7 +22,7 @@ export default function Index() {
                     style={{
                         ...styles.container,
                         flexDirection:
-                            width <= MAX_DEVICE_WIDTH ? "column" : "row",
+                            width && width <= MAX_DEVICE_WIDTH ? "column" : "row",
                     }}
                 >
                     <Box style={styles.left}>
