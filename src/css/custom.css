@@ -1,3 +1,24 @@
 :root {
     --docusaurus-highlighted-code-line-bg: rgb(169, 170, 173);
 }
+
+html , body {
+	height: 100%;
+  }
+
+.navbar__title {
+    font-family: 'Recursive', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'Recursive';
+    src: url('../../fonts/Recursive-Variable.ttf') format('ttf');
+}
+  
+@font-face {
+    font-family: 'IBM_Plex_Sans';
+    src: url('../../fonts/IBMPlexSans-Regular.ttf') format('ttf');
+}
