@@ -45,7 +45,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Sean Burman',
@@ -57,16 +56,23 @@ const config: Config = {
           label: 'FnCmp',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'mnemoSidebar',
+          position: 'left',
+          label: 'Mnemo',
+          href: 'https://pkg.go.dev/github.com/snburman/mnemo',
+        },
+        {
           href: 'https://github.com/snburman',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
-    footer: {
-      style: 'light',
-      copyright: `Copyright © ${new Date().getFullYear()} Sean Burman.`,
-    },
+    // footer: {
+    //   style: 'light',
+    //   copyright: `Copyright © ${new Date().getFullYear()} Sean Burman.`,
+    // },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
